@@ -1,14 +1,18 @@
-#from matplotlib.pyplot import *
-from bha import BHA
-from fmds import MF
-from smds import SA
+import numpy as np
 from time import time
-from base import (MeshK, MeshKLazy)
-from nystrom import Nystrom
-import datasets
+
+from bha.bha import BHA
+from bha.fmds import MF
+from bha.smds import SA
+from bha.base import (MeshK, MeshKLazy)
+from bha.nystrom import Nystrom
+import bha.datasets as datasets
 
 
 dataset_name = "brain_7k"
+
+# Brain 7k
+pts, polys = getattr(datasets, dataset_name)()
 
 t = 10
 l = 50
@@ -16,10 +20,6 @@ l_nys = 20
 m_eig = 50
 
 chunk_size = 2048
-
-# Brain 7k
-pts, polys = getattr(datasets, dataset_name)()
-
 
 n = len(pts)
 X = pts
@@ -57,6 +57,8 @@ print("-------------------------------")
 print("Done unreg Nystrom: rel. error %f " % nys.score_rows(full, chunk_size=chunk_size))
 print("Timings:")
 print("Fit: %f" % (t1-t0))
+
+nys._C.shape
 
 t0 = time()
 nys = Nystrom(l_nys, func=metric_func, rcond=1e-4)

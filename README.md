@@ -9,8 +9,8 @@ _Model: [XYZ RGB Asian Dragon](http://graphics.stanford.edu/data/3Dscanrep/)_
 ```
 pip install -U cython numpy
 pip install -r requirements.txt
-
-python bha/test_bha_mesh.py
+pip install .
+python test_bha_mesh.py
 ```
 This will install the relevant dependencies (so you might want to do it in a virtual environment!) and run an example.
 

@@ -1,8 +1,8 @@
 import numpy as np
 import scipy.linalg as la
 
-from sampling import RandomSampling, FarthestSampling
-from base import SymMatrixApprox
+from bha.sampling import RandomSampling, FarthestSampling
+from bha.base import SymMatrixApprox
 
 
 class Nystrom(SymMatrixApprox):

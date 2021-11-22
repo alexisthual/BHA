@@ -1,8 +1,8 @@
 import numpy as np
 import scipy
 
-from sampling import RandomSampling, FarthestSampling
-from mds import Scaling
+from bha.sampling import RandomSampling, FarthestSampling
+from bha.mds import Scaling
 
 
 class LMDS(Scaling):

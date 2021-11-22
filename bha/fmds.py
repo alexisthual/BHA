@@ -3,9 +3,9 @@ from scipy import sparse
 from scipy.sparse import linalg
 import scipy.linalg as la
 
-from bha import BHA
-from sampling import FarthestSampling
-from mds import Scaling
+from bha.bha import BHA
+from bha.sampling import FarthestSampling
+from bha.mds import Scaling
 
 
 class MF(BHA):

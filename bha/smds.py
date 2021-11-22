@@ -3,9 +3,9 @@ import scipy.sparse.linalg as sla
 import scipy.sparse as sparse
 import scipy.linalg as la
 
-from base import SymMatrixApprox
-from sampling import RandomSampling, FarthestSampling
-from mds import Scaling
+from bha.base import SymMatrixApprox
+from bha.sampling import RandomSampling, FarthestSampling
+from bha.mds import Scaling
 from cortex.polyutils import Surface
 
 

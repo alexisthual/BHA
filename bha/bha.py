@@ -5,11 +5,11 @@ from cortex.polyutils import Surface
 from scipy.sparse.linalg import LinearOperator
 import scipy.sparse.linalg as sparsela
 
-from thr import THR, THR_ROWS
-from base import SymMatrixApprox, MeshKLazy
-from sampling import RandomSampling, FarthestSampling
-from mds import Scaling
-from utils import counter
+from bha.thr import THR, THR_ROWS
+from bha.base import SymMatrixApprox, MeshKLazy
+from bha.sampling import RandomSampling, FarthestSampling
+from bha.mds import Scaling
+from bha.utils import counter
 
 
 class BHA(SymMatrixApprox):
